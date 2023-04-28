@@ -54,6 +54,7 @@ function Sentbox() {
   return (
 
       <div>
+        <h2>Sentbox</h2>
     {emaildata.map((item,index)=>(
         <div key={index} style={{backgroundColor:'yellow' ,margin:'3%'}}>
         <p>
