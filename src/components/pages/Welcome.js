@@ -1,6 +1,11 @@
 import React from 'react'
 import EmailForm from './EmailForm'
 import Sentbox from './Sentbox' 
+import { Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import { authAction } from '../store/AuthSlice'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 function Welcome() {
   const history = useNavigate()

@@ -12,7 +12,7 @@ export default function SignUP() {
      const enteredpassward = passwardref.current.value
      const enteredconfirmpassward = confirmpasswordref.current.value
 
-     if(enteredpassward!=enteredconfirmpassward){
+     if(enteredpassward!==enteredconfirmpassward){
         alert('both passward are not matched')
         return
      }
