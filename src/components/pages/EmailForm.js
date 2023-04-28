@@ -1,10 +1,12 @@
 import React, { useRef, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 function EmailForm() {
   const emailinputref = useRef()
   const messageinputref = useRef()
   const subjectinputref = useRef();
+  const history = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -26,6 +28,7 @@ function EmailForm() {
       }
   }).then((res)=>{
     if(res.ok){
+      history('/sentbox')
         return res.json()
     }else{
         res.json().then((data)=>{
